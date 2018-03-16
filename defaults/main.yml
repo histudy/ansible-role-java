@@ -1,0 +1,4 @@
+---
+java_version: 8
+java_install_headless: no
+java_install_jdk: no

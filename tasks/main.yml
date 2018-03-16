@@ -1,0 +1,8 @@
+---
+- name: install OpenJDK Runtime package
+  apt:
+    name: "openjdk-{{ java_version }}-jre{{ '-headless' if java_install_headless else '' }}"
+- name: install OpenJDK Development Kit package
+  apt:
+    name: "openjdk-{{ java_version }}-jdk{{ '-headless' if java_install_headless else '' }}"
+  when: java_install_jdk

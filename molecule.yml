@@ -1,0 +1,48 @@
+---
+ansible:
+  host_vars:
+    jre8-headless:
+      java_version: 8
+      java_install_headless: yes
+      java_install_jdk: no
+    jre9:
+      java_version: 9
+      java_install_headless: no
+      java_install_jdk: no
+    jdk9-headless:
+      java_version: 9
+      java_install_headless: yes
+      java_install_jdk: yes
+    jdk8:
+      java_version: 8
+      java_install_headless: no
+      java_install_jdk: yes
+dependency:
+  name: galaxy
+driver:
+  name: vagrant
+vagrant:
+  platforms:
+    - name: stretch
+      box: histudy/stretch
+  providers:
+    - name: virtualbox
+      type: virtualbox
+      options:
+        memory: 512
+        cpus: 1
+  instances:
+    - name: jre8-headless
+      ansible_groups:
+        - default
+    - name: jre9
+      ansible_groups:
+        - default
+    - name: jdk9-headless
+      ansible_groups:
+        - default
+    - name: jdk8
+      ansible_groups:
+        - default
+verifier:
+  name: serverspec
