@@ -1,7 +1,7 @@
 java
 =========
 
-Javaの基本パッケージをインストールします
+Javaの基本パッケージをインストールします。
 
 Role Variables
 --------------
@@ -14,7 +14,7 @@ Role Variables
 
 ### java_version
 
-インストールするOpenJDKのバージョンを指定します
+インストールするOpenJDKのバージョンを指定します。
 
 #### Example
 
@@ -24,7 +24,7 @@ java_version: 8
 
 ### java_install_headless
 
-ヘッドレスバージョンをインストールするか否かを指定します
+ヘッドレスバージョンをインストールするか否かを指定します。
 
 #### Example
 
@@ -34,7 +34,7 @@ java_install_headless: yes
 
 ### java_install_jdk
 
-JDKをインストールするか否かを指定します
+JDKをインストールするか否かを指定します。
 
 #### Example
 
